@@ -103,7 +103,7 @@ td.title {
 	padding: 0;
 	display: inline;
 	list-style: none;
-	margin-left: 10px;
+	margin-right: 10px;
 }
 
 #main {
@@ -127,11 +127,11 @@ td.title {
 }
 
 input.text-input {
-	width: 98%;
+	width: 99%;
 }
 
 textarea {
-	width: 98%;
+	width: 99%;
 	min-height: 100px;
 }
 
@@ -152,3 +152,9 @@ select {
 	margin-top: 10px;
 	margin-left: 5px;
 }
+
+td.hover, td.sortby {
+	background-color: black;
+	color: white;
+}
+
