@@ -22,17 +22,21 @@ header {
 	padding: 10px;
 	margin: 0;
 	background-color: black;
+	height: 18px;
+	position: static;
 }
 
 header ul {
 	margin: 0;
 	padding: 0;
 }
-header ul li {
+
+#id-list li {
 	margin: 0;
 	padding: 0;
 	display: inline;
 	list-style: none;
+	color: white;
 }
 
 header ul li a {
@@ -40,7 +44,7 @@ header ul li a {
 	text-decoration: none;
 }
 
-a.float-right {
+.float-right {
 	float: right;
 }
 

@@ -2,8 +2,10 @@
 <section id="main">
 	<section id="top">
 		<section id="basic_info">
-			<ul>
+			<ul id="id-list">
 				<li class="id"><?php echo $bug->id ?></li>
+			</ul>
+			<ul id="dates-list">
 				<li class="dates">Created: <?php echo $bug->created ?></li>
 				<li class="dates">Modified: <?php echo $bug->modified ?></li>
 			</ul>
@@ -16,9 +18,9 @@
 	</section>
 	<section id="bug_info">
 		<div id="info_box">
-			<h3>Title:</h3>
+			<h3>Title</h3>
 			<p><?php echo $bug->title ?></p>
-			<h3>Description:</h3>
+			<h3>Description</h3>
 			<p><?php echo $bug->description ?></p>
 		</div>
 		<div id="status_box">

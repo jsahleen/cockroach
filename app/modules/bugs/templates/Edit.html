@@ -2,19 +2,21 @@
 <section id="main">
 	<section id="top">
 		<section id="basic_info">
-			<ul>
+			<ul id="id-list">
 				<li class="id"><?php echo $bug->id ?></li>
+			</ul>
+			<ul id="dates-list">
 				<li class="dates">Created: <?php echo $bug->created ?></li>
 				<li class="dates">Modified: <?php echo $bug->modified ?></li>
 			</ul>
 		</section>
 	</section>
 	<form id="bug_edit_form" method="POST" action="/bugs/edit/<?php echo $bug->id ?>">
-		<h3>Title:</h3>
+		<h3>Title</h3>
 		<input class="text-input" type="text" name="title" value= "<?php echo $bug->title ?>">
-		<h3>Description:</h3>
+		<h3>Description</h3>
 		<textarea name="description"><?php echo $bug->description ?></textarea>
-		<h3 class="left">Bug Status:</h3>
+		<h3 class="left">Status</h3>
 		<select name="status">
 			<?php if($bug->status == 'New'):?>
 				<option value="New" selected="selected">New</option>
