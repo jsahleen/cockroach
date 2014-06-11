@@ -1,0 +1,13 @@
+<section id="list">
+	<table>
+		<?php foreach($this->bugs as $bug): ?>
+			<tr>
+				<td class="id"><a href="/bugs/view/<?php echo $bug->id ?>"><?php echo $bug->id ?></a></td>
+				<td class="title"><a href="/bugs/view/<?php echo $bug->id ?>"><?php echo $bug->title ?></a></td>
+				<td class="date"><?php echo $bug->created ?></td>
+				<td class="date"><?php echo $bug->modified ?></td>
+				<td class="status"><?php echo $bug->status ?></td>
+			</tr>
+		<?php endforeach ?>
+	</table>
+</section>

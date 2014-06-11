@@ -1,0 +1,10 @@
+<?php
+
+$config = array(
+	'db' => array(
+		'host' => 'xxxxx',
+		'database' => 'xxxxx',
+		'user' => 'xxxxx',
+		'password' => 'xxxxx'
+	)
+);

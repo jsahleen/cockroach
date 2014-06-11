@@ -1,0 +1,42 @@
+<?php $bug = $this->bug; ?>
+<section id="main">
+	<section id="top">
+		<section id="basic_info">
+			<ul>
+				<li><strong>Bug Id: </strong><?php echo $bug->id ?></li>
+				<li><strong>Created: </strong><?php echo $bug->created ?></li>
+				<li><strong>Modified: </strong><?php echo $bug->modified ?></li>
+			</ul>
+		</section>
+		<section id="edit_button">
+			<form>
+				<input type="button" value="Edit" onclick='window.location = "/bugs/edit/<?php echo $bug->id ?>"'>
+			</form>
+		</section>
+	</section>
+	<section id="bug_info">
+		<h3>Bug Title:</h3>
+		<p><?php echo $bug->title ?></p>
+		<h3>Bug Description:</h3>
+		<p><?php echo $bug->description ?></p>
+		<h3>Bug Status:</h3>
+		<p><?php echo $bug->status ?></p>
+	</section>
+	<section id="changes">
+		<h3 class="centered">Status Changes:</h3>
+		<table>
+			<thead>
+				<th>Date:</th>
+				<th>Changed From:</th>
+				<th>Changed To:</th>
+			</thead>
+			<?php foreach($bug->changes as $change): ?>
+				<tr>
+					<td><?php echo $change['change_date'] ?></td>
+					<td><?php echo $change['from_status'] ?></td>
+					<td><?php echo $change['to_status'] ?></td>
+				</tr>
+			<?php endforeach ?>
+		</table>
+	</section>
+</section>

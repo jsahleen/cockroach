@@ -1,0 +1,17 @@
+<section id="main">
+	<section id="top">
+		<h2 class="centered">CREATE BUG</h2>
+	</section>
+	<section id="bug_info">
+		<form id="create_bug_form" method="POST" action="/bugs/create">
+			<h3>Bug Title:</h3>
+			<input class="text-input" type="text" name="title"><br/>
+			<h3>Bug Description:</h3>
+			<textarea name="description"></textarea>
+			<div class="buttons">
+				<input type="submit" value="Save">	
+				<input type="button" value="Cancel" onclick='window.location = "/bugs"'/>
+			</div>
+		</form>
+	</section>
+</section>

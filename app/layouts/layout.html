@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<LINK href="/assets/css/cockroach.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<ul>
+				<li><a href="/">COCKROACH</a></li>
+				<li><a href="/bugs/create" class="float-right">Create Bug</a></li>
+			</ul>
+		</header>
+		<section id="sorter">
+			<table>
+				<tr>
+					<td id="id_sorter" class="id">Id</td>
+					<td id="title_sorter"class="title">Title</td>
+					<td id="created_sorter"class="date">Created</td>
+					<td id="modified_sorter"class="date">Modified</td>
+					<td id="status_sorter"class="status">Status</td>
+				</tr>	
+			</table>
+		</section>
+		<section class="content">
+			<?php echo $this->renderTemplate() ?>
+		</section>
+	</body>
+
+</html>

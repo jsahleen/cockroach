@@ -1,0 +1,67 @@
+<?php $bug = $this->bug; ?>
+<section id="main">
+	<section id="top">
+		<section id="basic_info">
+			<ul>
+				<li><strong>Bug Id: </strong><?php echo $bug->id ?></li>
+				<li><strong>Created: </strong><?php echo $bug->created ?></li>
+				<li><strong>Modified: </strong><?php echo $bug->modified ?></li>
+			</ul>
+		</section>
+	</section>
+	<form id="bug_edit_form" method="POST" action="/bugs/edit/<?php echo $bug->id ?>">
+		<h3>Bug Title:</h3>
+		<input class="text-input" type="text" name="title" value= "<?php echo $bug->title ?>">
+		<h3>Bug Description:</h3>
+		<textarea name="description"><?php echo $bug->description ?></textarea>
+		<h3 class="left">Bug Status:</h3>
+		<select name="status">
+			<?php if($bug->status == 'New'):?>
+				<option value="New" selected="selected">New</option>
+			<?php else: ?>
+				<option value="New">New</option>
+			<?php endif ?>
+			<?php if($bug->status == 'Confirmed'):?>
+				<option value="Confirmed" selected="selected">Confirmed</option>
+			<?php else: ?>
+				<option value="Confirmed">Confirmed</option>
+			<?php endif ?>
+			<?php if($bug->status == 'In Process'):?>
+				<option value="In Process" selected="selected">In Process</option>
+			<?php else: ?>
+				<option value="In Process">In Process</option>
+			<?php endif ?>
+			<?php if($bug->status == 'Resolved'):?>
+				<option value="Resolved" selected="selected">Resolved</option>
+			<?php else: ?>
+				<option value="Resolved">Resolved</option>
+			<?php endif ?>
+			<?php if($bug->status == 'Verified'):?>
+				<option value="Verified" selected="selected">Verified</option>
+			<?php else: ?>
+				<option value="Verified">Verified</option>
+			<?php endif ?>
+		</select><br />
+		<div class="buttons">
+			<input type="submit" value="Save" />
+			<input type="button" value="Cancel" onclick='window.location = "/bugs/view/<?php echo $bug->id ?>"'/>
+		</div>
+	</form>
+	<section id="changes">
+		<h3 class="centered">Status Changes:</h3>
+		<table>
+			<thead>
+				<th>Date:</th>
+				<th>Changed From:</th>
+				<th>Changed To:</th>
+			</thead>
+			<?php foreach($bug->changes as $change): ?>
+				<tr>
+					<td><?php echo $change['change_date'] ?></td>
+					<td><?php echo $change['from_status'] ?></td>
+					<td><?php echo $change['to_status'] ?></td>
+				</tr>
+			<?php endforeach ?>
+		</table>
+	</section>
+</section>
