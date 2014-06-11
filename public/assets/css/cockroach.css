@@ -203,16 +203,11 @@ p {
 	font-size: 16px;
 }
 
-#info_box {
-	float: left;
+#status_box {
 	margin-bottom: 25px;
 }
 
-#status_box {
-	float: right;
-}
-
-p.status_bubble{
+.status_bubble{
 	background-color: gray;
 	color: whitesmoke;
 	width: 150px;
@@ -220,4 +215,5 @@ p.status_bubble{
 	padding: 4px;
 	border: 1px solid black;
 	border-radius: 2px;
+	float: right;
 }

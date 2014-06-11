@@ -17,15 +17,15 @@
 		</section>
 	</section>
 	<section id="bug_info">
+		<div id="status_box">
+			<div class="status_bubble"><?php echo $bug->status ?></div>
+		<div>
 		<div id="info_box">
 			<h3>Title</h3>
 			<p><?php echo $bug->title ?></p>
 			<h3>Description</h3>
 			<p><?php echo $bug->description ?></p>
 		</div>
-		<div id="status_box">
-			<p class="status_bubble"><?php echo $bug->status ?></p>
-		<div>
 	</section>
 	<section id="changes">
 		<h3 class="centered">HISTORY</h3>
