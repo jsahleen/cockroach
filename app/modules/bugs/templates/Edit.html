@@ -3,16 +3,16 @@
 	<section id="top">
 		<section id="basic_info">
 			<ul>
-				<li class="id">Bug Id: <?php echo $bug->id ?></li>
+				<li class="id"><?php echo $bug->id ?></li>
 				<li class="dates">Created: <?php echo $bug->created ?></li>
 				<li class="dates">Modified: <?php echo $bug->modified ?></li>
 			</ul>
 		</section>
 	</section>
 	<form id="bug_edit_form" method="POST" action="/bugs/edit/<?php echo $bug->id ?>">
-		<h3>Bug Title:</h3>
+		<h3>Title:</h3>
 		<input class="text-input" type="text" name="title" value= "<?php echo $bug->title ?>">
-		<h3>Bug Description:</h3>
+		<h3>Description:</h3>
 		<textarea name="description"><?php echo $bug->description ?></textarea>
 		<h3 class="left">Bug Status:</h3>
 		<select name="status">
@@ -48,12 +48,12 @@
 		</div>
 	</form>
 	<section id="changes">
-		<h3 class="centered">Status Changes:</h3>
+		<h3 class="centered">HISTORY</h3>
 		<table>
 			<thead>
-				<th>Date:</th>
-				<th>Changed From:</th>
-				<th>Changed To:</th>
+				<th>Date</th>
+				<th>Changed From</th>
+				<th>Changed To</th>
 			</thead>
 			<?php foreach($bug->changes as $change): ?>
 				<tr>
