@@ -1,8 +1,17 @@
 html, body, * {
-	font-family: Helvetica, sans-serif;
+	font-family: Arial, sans-serif;
 	font-size: 14px;
 	padding: 0;
 	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a.hover {
+	color: red;
 }
 
 header {
@@ -49,6 +58,7 @@ h3 {
 	font-weight: bold;
 	padding: 5px;
 	font-size: 14px;
+	border: 1px solid black;
 }
 
 table {
@@ -57,31 +67,33 @@ table {
 
 td.date {
 	width: 15%;
+	text-align: center;
 }
 
-td.id, td.status {
+td.id {
+	width: 5%;
+}
+
+
+td.status {
+	text-align: center;
 	width: 10%;
 }
-
 
 td.title {
 	width: *;
 }
 
-#sorter table tr td {
-	border: 1px solid black;
-}
-
 #list table tr td {
 	border: 1px solid gray;
-	background-color: white;
+	background-color: whitesmoke;
 	padding: 2px;
 	margin-top: 2px;
 	margin-bottom: 2px;
 }
 
 #top {
-	height: 20px;
+	height: 25px;
 	background-color: black;
 	color: white;
 	padding: 10px;
@@ -104,6 +116,7 @@ td.title {
 	display: inline;
 	list-style: none;
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 #main {
@@ -113,6 +126,12 @@ td.title {
 	border: 10px solid gray;
 	border-radius: 2px;
 	margin-top: 100px;
+	background-color: whitesmoke;
+}
+
+#changes {
+	clear: both;
+	border-top: 1px solid gray;
 }
 
 #changes table thead th {
@@ -128,19 +147,33 @@ td.title {
 
 input.text-input {
 	width: 99%;
+	padding: 2px;
 }
 
 textarea {
 	width: 99%;
 	min-height: 100px;
+	padding: 2px;
 }
 
 .centered {
 	text-align: center;
 }
 
+#top .centered {
+	padding-top: 5px;
+}
+
 .left {
 	float: left;
+}
+
+li.id {
+	font-size: 24px;
+}
+
+.dates {
+	font-size: 12px;
 }
 
 .buttons {
@@ -158,3 +191,24 @@ td.hover, td.sortby {
 	color: white;
 }
 
+p {
+	font-size: 16px;
+}
+
+#info_box {
+	float: left;
+	margin-bottom: 25px;
+}
+
+#status_box {
+	float: right;
+}
+
+p.status_bubble{
+	background-color: gray;
+	color: whitesmoke;
+	width: 150px;
+	text-align: center;
+	padding: 4px;
+	border-radius: 2px;
+}

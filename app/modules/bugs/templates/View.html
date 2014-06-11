@@ -3,9 +3,9 @@
 	<section id="top">
 		<section id="basic_info">
 			<ul>
-				<li><strong>Bug Id: </strong><?php echo $bug->id ?></li>
-				<li><strong>Created: </strong><?php echo $bug->created ?></li>
-				<li><strong>Modified: </strong><?php echo $bug->modified ?></li>
+				<li class="id">Bug Id: <?php echo $bug->id ?></li>
+				<li class="dates">Created: <?php echo $bug->created ?></li>
+				<li class="dates">Modified: <?php echo $bug->modified ?></li>
 			</ul>
 		</section>
 		<section id="edit_button">
@@ -15,12 +15,15 @@
 		</section>
 	</section>
 	<section id="bug_info">
-		<h3>Bug Title:</h3>
-		<p><?php echo $bug->title ?></p>
-		<h3>Bug Description:</h3>
-		<p><?php echo $bug->description ?></p>
-		<h3>Bug Status:</h3>
-		<p><?php echo $bug->status ?></p>
+		<div id="info_box">
+			<h3>Bug Title:</h3>
+			<p><?php echo $bug->title ?></p>
+			<h3>Bug Description:</h3>
+			<p><?php echo $bug->description ?></p>
+		</div>
+		<div id="status_box">
+			<p class="status_bubble"><?php echo $bug->status ?></p>
+		<div>
 	</section>
 	<section id="changes">
 		<h3 class="centered">Status Changes:</h3>
