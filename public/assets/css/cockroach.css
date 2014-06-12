@@ -109,7 +109,7 @@ td.title {
 
 #bug_info, #bug_edit_form {
 	clear: both;
-	margin-top: 0px;
+	margin: 0px;
 	padding: 10px;
 }
 
@@ -118,13 +118,25 @@ td.title {
 	padding: 0;
 	float: left;
 }
-#basic_info ul li {
+
+#basic_info ul.id li {
 	margin: 0;
 	padding: 0;
 	display: inline;
 	list-style: none;
-	margin-right: 10px;
-	margin-bottom: 10px;
+}
+
+#dates-list {
+	margin: 0;
+	float: left;
+	list-style: none;
+	color: white;
+}
+
+#dates-list li {
+	padding-left: 50px;
+	display: block;
+	vertical-align: bottom;
 }
 
 #main {
@@ -139,14 +151,32 @@ td.title {
 
 #changes {
 	clear: both;
-	border-top: 1px solid gray;
+	padding: 10px;
+}
+
+#changes table {
+	border: 1px solid gray;
+}
+
+#changes h3 {
+	margin: 0;
+	padding: 10px;
+	margin-bottom: 10px;
+	margin-top: -20px;
+	font-size: 18px;
 }
 
 #changes table thead th {
-	background-color: black;
-	color: white;
+	background-color: silver;
+	color: black;
 	text-align: left;
 	padding: 5px;
+	border: 1px solid gray;
+}
+
+#changes table tbody tr td {
+	padding: 5px;
+	border: 1px solid gray;
 }
 
 #edit_button {
@@ -208,12 +238,12 @@ p {
 }
 
 .status_bubble{
-	background-color: gray;
+	background-color: silver;
 	color: whitesmoke;
 	width: 150px;
 	text-align: center;
 	padding: 4px;
-	border: 1px solid black;
-	border-radius: 2px;
 	float: right;
+	border-bottom: 1 px solid gray;
+	border-right: 1 px solid gray;
 }
